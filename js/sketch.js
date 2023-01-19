@@ -12,7 +12,7 @@ https://www.youtube.com/watch?v=JV5XBmaQdIA&t=355s&ab_channel=Mr.Erdreich
 
 "use strict";
 
-const { text } = require("express");
+// const { text } = require("express");
 
 //Set all valuables 
 let p1y = 400;
@@ -69,6 +69,7 @@ function draw() {
 
 
 }
+
 // Draws the background as well as the scores on the canvas
 function backgroundC() {
     background(50, 50, 50);
@@ -83,6 +84,7 @@ function backgroundC() {
 
 
 }
+
 // ball function and physics
 function ball() {
     //Draws the ball
@@ -154,14 +156,19 @@ function scores() {
 
     }
 
+    
     if(p1s === 10){
+        textAlign(CENTER);
         text("Player 1 wins!", height/2, width/2 );
-        setTimeout(clear(), 2000);
+        circleX = 0;
+        circleY = 0;
     }
 
     if(p2s === 10){
         text("Player 2 wins!", height/2, width/2 );
-        setTimeout(clear(), 2000);
+        circleX = 0;
+        circleY = 0;
+
     }
 }
 
