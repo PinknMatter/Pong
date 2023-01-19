@@ -11,6 +11,9 @@ https://www.youtube.com/watch?v=JV5XBmaQdIA&t=355s&ab_channel=Mr.Erdreich
 */
 
 "use strict";
+
+const { text } = require("express");
+
 //Set all valuables 
 let p1y = 400;
 let speed = 4;
@@ -149,6 +152,16 @@ function scores() {
         circleX = 500;
         circleY = 100;
 
+    }
+
+    if(p1s === 10){
+        text("Player 1 wins!", height/2, width/2 );
+        setTimeout(clear(), 2000);
+    }
+
+    if(p2s === 10){
+        text("Player 2 wins!", height/2, width/2 );
+        setTimeout(clear(), 2000);
     }
 }
 
